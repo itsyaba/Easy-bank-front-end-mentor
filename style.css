@@ -47,8 +47,11 @@ nav{
 
 nav ul{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+}
+
+.hamburger{
+    display: none;
 }
 
 nav ul li{
@@ -204,8 +207,6 @@ nav ul li a:hover{
     margin: 5px;
 }
 
-
-
 .plane , 
 .confetti ,
 .currency , 
@@ -301,4 +302,120 @@ footer{
 
 .third p{
     padding-top: 40px;
+}
+
+@media (max-width:700px) {
+    nav ul , nav .btn{
+        display: none;
+    }
+
+    nav ul.active{
+        position: absolute;
+        top: 130%;
+        left: 0%;
+        right:-20%;
+        margin: 0 50px 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--White);
+        width: 100vw;
+        box-shadow: 3px 6px 5px;
+        opacity: 1;
+    }
+
+    nav ul li{
+        padding: 30px;
+
+    }
+
+    .hamburger{
+        display: block;
+        transform: translateX(120px);
+    }
+
+    .hamburger:hover{
+        background-color: var(--Lime-Green);
+        padding: 20px;
+        border-radius: 50%;
+    }
+
+    .front-page{
+        flex-direction: column-reverse;
+        margin-left: 10px;
+
+    }
+
+    .text-flex{
+        width: 100vw;
+        text-align: center;
+        margin-bottom: 400px;
+
+    }
+
+    .text-flex p{
+        margin: 0 40px;
+    }
+
+    .img-flex{
+        position: relative;
+        top:40%;
+        right: 0%;
+        margin-bottom: 200px;
+    }
+
+    .img-one-flex{
+        background-image: url('images/bg-intro-mobile.svg');
+        width: 100vw;
+    }
+
+    .img-two-flex{
+        width: 100vw;
+        height: 60rem;
+        background-image: url('images/image-mockups.png'); 
+        top: 0%;
+        left: 5%;
+    }
+
+    .front-btn {
+        margin-bottom: 100px;
+    }
+
+    .second-page{
+        margin-top: 70px;
+        text-align: center;
+        height: 120vh;
+    }
+    .reasons{
+        flex-direction: column;
+    }
+    /* ARTICLES */
+
+    .article-detail{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .article-detail div{
+        padding: 30px;
+    }
+
+    .article h2{
+        text-align: center;
+        color: red;
+        /* margin-bottom: 40px; */
+    }
+    
+    .article{
+        margin-right: 100px;
+        transform: translateX(50px);
+    }   
+
+    footer{
+        flex-direction: column;
+    
+    }
+
 }
